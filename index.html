@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="disenio.css">
+</head>
+<body>
+    <h2>Lista de Tareas | To Do List</h2>
+    <div id="cont-selector">
+        <div>
+            <input id="in-tarea" onclick="clkNueTarea()" type="string" name="">
+            <button id="add-tarea" onclick="agregaTarea()">Agregar</button>
+        </div>
+        <div>
+            <input id="in-buscar" onclick="clkEnBuscar()" type="string" name="">
+            <button id="bot-busca" onclick="buscarTarea()">Buscar</button>
+        </div>
+        <div>
+            <input id="in-tarea-act" onclick="clkActTarea()" type="string" name="">
+            <input id="nue-texto" onclick="clkNueTexto()" type="string" name="">
+            <button id="bot-nue-texto" onclick="actualizTarea()">Actualizar</button>
+        </div>
+        <div>
+            <input id="in-eliminar" onclick="clkEnEliminar()" type="string" name="">
+            <button id="bot-eliminar" onclick="eliminarTarea()">Eliminar</button>
+        </div>
+    </div>
+    <div id="cont-tareas">
+        <h3>Lista de Tareas</h3>
+        <ol id="lista-tareas">
+            <li></li>
+        </ol>
+    </div>
+    <div id="cont-encontrado">
+        <h3>Tareas encontradas</h3>
+        <ol id="lista-encontrada">
+            <li></li>
+        </ol>
+    </div>
+   <script src="manejo.js"></script> 
+</body>
+</html>
