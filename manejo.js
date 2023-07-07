@@ -11,8 +11,18 @@ const inTarEliminar = document.querySelector("#in-eliminar");
 const listaTareas   = document.querySelector("#lista-tareas");
 const listaDeEncont = document.querySelector("#lista-encontrada");
 
-const entEncontrad  = [];
-const listaDeTareas = JSON.parse(localStorage.getItem('listaDeTareas'));
+// Inicializar la variable
+var   listaDeTareas = [];
+// Verificar si ya existe en localStorage
+if (localStorage.getItem("listaDeTareas")) {
+  // Recupero el valor de la variable desde localStorage
+  listaDeTareas = JSON.parse(localStorage.getItem('listaDeTareas'));
+} else {
+  // Si la variable no existe en localStorage, la guardo
+  localStorage.setItem('listaDeTareas', JSON.stringify(listaDeTareas));
+}
+var  entEncontrad  = [];
+
 
 let nuevaTarea      = "";
 let buscaEnTarea    = "";
